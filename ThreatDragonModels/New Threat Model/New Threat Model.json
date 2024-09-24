@@ -19,8 +19,8 @@
         "cells": [
           {
             "position": {
-              "x": 750,
-              "y": 200.0000000000004
+              "x": 360,
+              "y": 450.00000000000045
             },
             "size": {
               "width": 240,
@@ -41,7 +41,7 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "threatFrequency": {
-                "tampering": 10,
+                "tampering": 11,
                 "informationDisclosure": 2,
                 "denialOfService": 0
               }
@@ -49,8 +49,8 @@
           },
           {
             "position": {
-              "x": 300,
-              "y": 170
+              "x": 340,
+              "y": 100
             },
             "size": {
               "width": 170,
@@ -86,8 +86,8 @@
           },
           {
             "position": {
-              "x": 98,
-              "y": 110
+              "x": 40,
+              "y": 240
             },
             "size": {
               "width": 112.5,
@@ -120,8 +120,8 @@
           },
           {
             "position": {
-              "x": 538,
-              "y": 170
+              "x": 670,
+              "y": 210
             },
             "size": {
               "width": 140,
@@ -157,8 +157,8 @@
           },
           {
             "position": {
-              "x": 810,
-              "y": 250
+              "x": 420,
+              "y": 500.00000000000006
             },
             "size": {
               "width": 120,
@@ -217,7 +217,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Login Request",
               "description": "Data flow representing login credentials being entered by the user.",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -253,7 +253,10 @@
             },
             "target": {
               "cell": "6807de79-e567-48e1-b989-bd1bc3d32039"
-            }
+            },
+            "labels": [
+              "Login Request"
+            ]
           },
           {
             "shape": "flow",
@@ -276,7 +279,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Browser Login Request",
               "description": "Data flow representing the login request sent from the user’s browser.",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -313,7 +316,39 @@
             "target": {
               "cell": "b2b39283-580c-4346-8b64-d3dbad789959"
             },
-            "vertices": []
+            "vertices": [],
+            "labels": [
+              "Browser Login Request"
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "67aed326-5eb9-4847-9a02-51a4ad67a159",
+            "source": {
+              "x": 400,
+              "y": 40
+            },
+            "target": {
+              "x": 410,
+              "y": 350
+            },
+            "vertices": [
+              {
+                "x": 310,
+                "y": 170
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -336,7 +371,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Queries",
               "description": "Data flow representing the web server querying the database for user credentials.",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -385,7 +420,10 @@
             },
             "target": {
               "cell": "52b9c630-1940-42b3-bbe2-00501cacf8f8"
-            }
+            },
+            "labels": [
+              "Queries"
+            ]
           }
         ]
       }
